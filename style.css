@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+}
+
+.main-bg {
+    background-color: #ffffff !important;
+}
+
+.startQuizes.main-bg{
+    background-color: #CCE2C2 !important;
+}
+
+.centerQuizes.main-bg {
+    background-color: #E4E5C7 !important;
+}
+
+.endingQuizes.main-bg {
+    background-color: #DBADAD !important;
+}
+
+.resultQuizes.main-bg {
+    background-color: #ffffff !important;
+}
+
+.main-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+}
+
+.starterBtns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizes .starterBtns {
+    display: none;
+}
+
+.result .starterBtns {
+    display: none;
+}
+
+img {
+    max-width: 561px;
+    height: auto;
+}
+
+.logo {
+    width: 100%;
+
+}
+
+
+.startBtn {
+    color: #ffff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.2rem 1.7rem;
+    background-color: #35BD3A;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 4px 5px 3px rgba(23, 102, 26, 0.942);
+    cursor: pointer;
+}
+
+.highestScore {
+    margin-top: 233px;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    font-family: inherit;
+    display: none;
+}
+
+.played .highestScore {
+    display: block;
+}
+
+.main-quiz {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quizes .main-quiz {
+    display: flex;
+}
+
+.result .main-quiz {
+    display: none;
+}
+
+.main-logo {
+    width: 222px;
+}
+
+.counter,
+.timer,
+.next {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.volume {
+    cursor: pointer;
+    height: 25px;
+    top: 70px;
+}
+
+.volumeMute {
+    cursor: pointer;
+    height: 25px;
+    top: 70px;
+    display: none;
+}
+
+.mute .volume {
+    display: none;
+}
+
+.mute .volumeMute {
+    display: block;
+}
+
+.quizCount,
+.time {
+    background-color: #FEC33D;
+    border-radius: 6.66px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 4px 10px;
+}
+
+.question {
+    background-color: #F5F5F57A;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 37px 209px 37px 43px;
+    margin-bottom: 15px;
+}
+
+.time {
+    background-color: #02A4096E;
+    color: white;
+}
+
+.centerQuizes section .main-content .main-quiz .timer .time {
+    background-color: #C5B1006E;
+}
+
+.endingQuizes section .main-content .main-quiz .timer .time {
+    background-color: #C50C006E;
+}
+
+.options {
+    background-color: #F5F5F57A;
+    border-radius: 13px;
+    padding: 21px 33px 4px 11px;
+}
+
+.option {
+    border: 3px solid #D9D9D9;
+    background-color: inherit;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    padding: 12px 12px 12px 22px;
+    margin-bottom: 23px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrong-choose {
+    display: none;
+}
+
+.correctOp {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+.wrong-choose>img {
+    width: 24px;
+    height: 24px;
+    margin-left: 22px;
+}
+
+/* if wrong */
+.wrong.option .wrong-choose {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .wrong .option .hunt .correctOp {
+    display: block;
+} */
+
+/* if correct */
+.correct.option .correctOp {
+    display: block;
+}
+
+/* if wrong border color */
+.wrong.option {
+    border-color: #FF7A7A;
+}
+
+/* if correct border color */
+.correct.option {
+    border-color: #35BD3A;
+}
+
+.nextBtn {
+    color: #01AB08;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.result .nextBtn {
+    display: none;
+}
+
+.resultSeeBtn {
+    color: #01AB08;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: none;
+}
+
+.result .resultSeeBtn {
+    display: block;
+}
+
+.centerQuizes section .main-content .main-quiz .next .nextBtn {
+    color: #C58800;
+}
+
+.endingQuizes section .main-content .main-quiz .next .nextBtn {
+    color: #C50000;
+}
+
+/* result */
+
+.result-main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    display: none;
+}
+
+.result .result-main {
+    display: flex;
+}
+
+.result-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo-result {
+    width: 222px;
+}
+
+.result-inner-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-inner-logo {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* progress bar result */
+/* Centering and styling the progress container */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* Progress circle wrapper */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.progress-circle {
+    position: relative;
+    width: 314px;
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-text {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Background circle (incorrect answers) */
+.progress-ring__background {
+    stroke: #FF7A7A; /* Red */
+}
+
+/* Progress circle (correct answers) */
+.progress-ring__progress {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: #35BD3A; /* Green for correct answers */
+    stroke-dasharray: 0 100; /* Initially no progress */
+    transition: stroke-dasharray 0.4s ease;
+}
+
+/* quote */
+.quote{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 31px;
+}
+
+/* retry btn */
+.retryBtn {
+    color: #ffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 3rem 1rem 1.3rem;
+    background-color: #35BD3A;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 4px 5px 3px rgba(23, 102, 26, 0.942);
+    cursor: pointer;
+}
+
+.retrybtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

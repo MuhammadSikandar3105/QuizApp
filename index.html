@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="main-bg">
+    <section class="main-bg ">
+        <div class="main-content">
+            <!-- sterter home -->
+            <div class="starterBtns">
+                <img class="logo" src="assets/Group 4.png" alt="logo">
+                <button class="startBtn">Start Now >>></button>
+                <p class="highestScore">Highest Score: 20/25</p>
+            </div>
+            <!-- quizes -->
+            <div class="main-quiz">
+                <header>
+                    <img class="main-logo" src="assets/Group 4.png" alt="logo">
+                    <div class="volumeimages">
+                        <img class="volume" src="assets/🦆 icon _Volume Up_.png" alt="volume">
+                        <img class="volumeMute" src="assets/🦆 icon _Volume Mute_.png" alt="volumemute">
+                    </div>
+                </header>
+                <div class="counter">
+                    <span class="quizCount"></span>
+                </div>
+                <p class="question">Inside which HTML element do we put the JavaScript? </p>
+                <div class="timer">
+                    <span class="time"></span>
+                </div>
+                <div class="options">
+                    <div class="option">
+                        <span>js</span>
+                        <span class="wrong-choose">You choose<img src="assets/wrong.png" alt="wrong"></span>
+                        <img class="correctOp" src="assets/correct.png" alt="correct">
+                    </div>
+                </div>
+                <div class="next">
+                    <p class="nextBtn">Next ></p>
+                    <p class="resultSeeBtn">See Result ></p>
+                </div>
+            </div>
+            <!-- result -->
+            <div class="result-main">
+                <header class="result-logo">
+                    <div class="result-inner-logo">
+                        <img class="main-logo-result" src="assets/Group 4.png" alt="logo">
+                        <p>Result</p>
+                    </div>
+                </header>
+                <main>
+                    <div class="progress-container">
+                        <div class="progress-circle">
+                            <span class="score-text">0/3</span>
+                            <svg class="progress-ring" width="314" height="314">
+                                <!-- Background circle (incorrect/red) -->
+                                <circle class="progress-ring__background" stroke-width="46" fill="transparent" r="111"
+                                    cx="157" cy="157" />
+                                <!-- Foreground circle (correct/green) -->
+                                <circle class="progress-ring__progress" stroke-width="46" fill="transparent" r="111"
+                                    cx="157" cy="157" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="quote"></p>
+                    <div class="retrybtn">
+                        <button class="retryBtn">&lt;&lt;&lt; Retry</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
